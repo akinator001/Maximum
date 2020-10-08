@@ -9,7 +9,12 @@ import com.cp.max.Maximum;
 
 import static org.junit.Assert.*;
 
+import org.junit.Assert;
+
 public class TestMaximum {
     
-	
+	@Test
+	public void testMaximum() {
+		Assert.assertEquals((Integer)3, Maximum.maximum(1,2,3));
+	}
 }

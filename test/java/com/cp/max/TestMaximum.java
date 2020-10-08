@@ -47,4 +47,19 @@ public class TestMaximum {
 	public void maximumFloatAtThird() {
 		Assert.assertEquals((Float)3.3f, Maximum.maximum(2.2f,1.1f,3.3f));
 	}
+	
+	@Test
+	public void maximumStringAtFirst() {
+		Assert.assertEquals("cat", Maximum.maximum("cat","apple","ball"));
+	}
+	
+	@Test
+	public void maximumStringAtSecond() {
+		Assert.assertEquals("cat", Maximum.maximum("apple","cat","ball"));
+	}
+	
+	@Test
+	public void maximumStringAtThird() {
+		Assert.assertEquals("cat", Maximum.maximum("apple","ball","cat"));
+	}
 }

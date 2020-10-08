@@ -25,8 +25,14 @@ public class Maximum <E extends Comparable<E>> {
 		
 		if(list.size()==0)
 				return null;
+		printMax(Collections.max(list));
 		return Collections.max(list);
-		
+	
 	}
 	
+	public static <E> void printMax(E max) {
+		System.out.println("Maximum is :  "+ max);
+		return;
+	}
+
 }

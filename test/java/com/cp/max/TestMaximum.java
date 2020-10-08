@@ -17,4 +17,9 @@ public class TestMaximum {
 	public void testMaximum() {
 		Assert.assertEquals((Integer)3, Maximum.maximum(1,2,3));
 	}
+	
+	@Test
+	public void maximumAtFirst() {
+		Assert.assertEquals((Integer)3, Maximum.maximum(3,2,1));
+	}
 }

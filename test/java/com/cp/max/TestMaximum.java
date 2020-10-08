@@ -9,57 +9,42 @@ import com.cp.max.Maximum;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+
 import org.junit.Assert;
 
 public class TestMaximum {
     
 	@Test
-	public void testMaximum() {
-		Assert.assertEquals((Integer)3, Maximum.maximum(1,2,3));
+	public void testIntMaximum() {
+		ArrayList<Integer> l = new ArrayList<>();
+		l.add(1);
+		l.add(2);
+		l.add(3);
+		l.add(4);
+		Assert.assertEquals((Integer)4, Maximum.maximum(l));
 	}
-	
+
 	@Test
-	public void maximumAtFirst() {
-		Assert.assertEquals((Integer)3, Maximum.maximum(3,2,1));
+	public void testFloatMaximum() {
+		ArrayList<Float> l = new ArrayList<>();
+		l.add(1.1f);
+		l.add(2.2f);
+		l.add(3.3f);
+		l.add(4.4f);
+		l.add(5.5f);
+		Assert.assertEquals((Float)5.5f, Maximum.maximum(l));
 	}
-	
+
 	@Test
-	public void maximumAtSecond() {
-		Assert.assertEquals((Integer)3, Maximum.maximum(2,3,1));
+	public void testStringMaximum() {
+		ArrayList<String> l = new ArrayList<>();
+		l.add("cat");
+		l.add("dog");
+		l.add("bull");
+		l.add("elephant");
+		l.add("zebra");
+		Assert.assertEquals("zebra", Maximum.maximum(l));
 	}
-	
-	@Test
-	public void maximumAtThird() {
-		Assert.assertEquals((Integer)3, Maximum.maximum(2,1,3));
-	}
-	
-	@Test
-	public void maximumFloatAtFirst() {
-		Assert.assertEquals((Float)3.3f, Maximum.maximum(3.3f,2.2f,1.1f));
-	}
-	
-	@Test
-	public void maximumFloatAtSecond() {
-		Assert.assertEquals((Float)3.3f, Maximum.maximum(2.2f,3.3f,1.1f));
-	}
-	
-	@Test
-	public void maximumFloatAtThird() {
-		Assert.assertEquals((Float)3.3f, Maximum.maximum(2.2f,1.1f,3.3f));
-	}
-	
-	@Test
-	public void maximumStringAtFirst() {
-		Assert.assertEquals("cat", Maximum.maximum("cat","apple","ball"));
-	}
-	
-	@Test
-	public void maximumStringAtSecond() {
-		Assert.assertEquals("cat", Maximum.maximum("apple","cat","ball"));
-	}
-	
-	@Test
-	public void maximumStringAtThird() {
-		Assert.assertEquals("cat", Maximum.maximum("apple","ball","cat"));
-	}
+
 }

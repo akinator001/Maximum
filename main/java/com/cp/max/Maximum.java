@@ -3,26 +3,30 @@
  */
 package com.cp.max;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class Maximum <E extends Comparable<E>> {
-	E a, b, c ;
-	Maximum(E a,E b, E c) {
-		this.a = a;
-		this.b = b;
-		this.c = c;
+	List<E> list = new ArrayList<>();
+	
+	Maximum(E...parameter) {
+		for(E e : parameter) {
+			this.list.add(e);
+		}
 	}
+	
 	public static void main(String[] args) {
 		System.out.println("Welcome to world of max ");
 		
 	}
 	
-	public static <E extends Comparable<E>> E maximum(E a ,E b ,E c) {
-		E max = a;
-		if(b.compareTo(max)>0)
-			max=b;
-		if(c.compareTo(max)>0)
-			max=c;
+	public static <E extends Comparable<E>> E maximum(ArrayList<E> list) {
 		
-		return max;
+		if(list.size()==0)
+				return null;
+		return Collections.max(list);
+		
 	}
 	
 }

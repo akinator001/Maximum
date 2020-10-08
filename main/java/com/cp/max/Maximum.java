@@ -3,7 +3,13 @@
  */
 package com.cp.max;
 
-public class Maximum {
+public class Maximum <E extends Comparable<E>> {
+	E a, b, c ;
+	Maximum(E a,E b, E c) {
+		this.a = a;
+		this.b = b;
+		this.c = c;
+	}
 	public static void main(String[] args) {
 		System.out.println("Welcome to world of max ");
 		

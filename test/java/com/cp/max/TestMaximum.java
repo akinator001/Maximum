@@ -32,4 +32,19 @@ public class TestMaximum {
 	public void maximumAtThird() {
 		Assert.assertEquals((Integer)3, Maximum.maximum(2,1,3));
 	}
+	
+	@Test
+	public void maximumFloatAtFirst() {
+		Assert.assertEquals((Float)3.3f, Maximum.maximum(3.3f,2.2f,1.1f));
+	}
+	
+	@Test
+	public void maximumFloatAtSecond() {
+		Assert.assertEquals((Float)3.3f, Maximum.maximum(2.2f,3.3f,1.1f));
+	}
+	
+	@Test
+	public void maximumFloatAtThird() {
+		Assert.assertEquals((Float)3.3f, Maximum.maximum(2.2f,1.1f,3.3f));
+	}
 }
